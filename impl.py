@@ -1,7 +1,8 @@
 #!/usr/local/bin/python3
 
-def encode(codePoint):
-    order = ord(codePoint)
+
+def encode_one_code_point(cp):
+    order = ord(cp)
     # in range [0x0, 0x7F]
     if order < 0x80:
         return order.to_bytes(1, byteorder='big')
